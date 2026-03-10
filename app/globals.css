@@ -12,26 +12,26 @@
   --text-main: #112136;
   --text-muted: #4f6684;
   --line: #d4e2f5;
-  --accent: oklch(0.97 0 0);
+    --accent: #1f63f2;
   --accent-soft: #4f86ff;
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+  --primary: #000000;
+  --primary-foreground: #ffffff;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #111111;
+  --muted: #f5f5f5;
+  --muted-foreground: #111111;
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.58 0.22 27);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #3b82f6;
   --chart-1: oklch(0.809 0.105 251.813);
   --chart-2: oklch(0.623 0.214 259.815);
   --chart-3: oklch(0.546 0.245 262.881);
@@ -48,9 +48,9 @@
 }
 
 @theme inline {
-  --color-background: var(--bg);
-  --color-foreground: var(--text-main);
-  --font-sans: var(--font-sans);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-display);
   --font-mono: var(--font-code);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -92,10 +92,9 @@
 
 body {
   margin: 0;
-  color: var(--text-main);
+  color: var(--foreground);
   font-family: var(--font-display), sans-serif;
-  background: radial-gradient(circle at 15% -10%, #e6f0ff 0%, transparent 44%),
-    radial-gradient(circle at 85% 0%, #deebff 0%, transparent 40%), var(--bg);
+  background: var(--background);
 }
 
 a {
@@ -134,10 +133,10 @@ a {
 }
 
 .topbar {
-  display: none;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 0;
+  padding: 1.25rem 0;
 }
 
 .brand-mark {
@@ -149,8 +148,17 @@ a {
 
 .nav-links {
   display: flex;
-  gap: 1.25rem;
+  align-items: center;
+  gap: 1.1rem;
   color: var(--text-muted);
+}
+
+.nav-chip {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.38rem 0.78rem;
+  color: var(--accent);
+  background: #f5f9ff;
 }
 
 .nav-links a:hover,
@@ -160,10 +168,10 @@ a {
 }
 
 .hero {
-  min-height: 92vh;
-  display: grid;
-  place-items: center;
-  padding: 2rem 0 3.2rem;
+  min-height: 82vh;
+  display: flex;
+  align-items: center;
+  padding: 2.2rem 0 2rem;
   text-align: center;
 }
 
@@ -171,9 +179,9 @@ a {
 .hero-minimal {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.1rem;
+  gap: 1rem;
   align-items: center;
-  max-width: 860px;
+  max-width: 920px;
   margin: 0 auto;
 }
 
@@ -185,19 +193,19 @@ a {
 }
 
 .hero-title {
-  max-width: 12ch;
-  margin: 0.2rem auto 0.6rem;
-  font-size: clamp(2.4rem, 7vw, 5rem);
-  line-height: 0.98;
+  max-width: 13ch;
+  margin: 0.2rem auto 0.55rem;
+  font-size: clamp(2.6rem, 7vw, 5.4rem);
+  line-height: 0.95;
   letter-spacing: -0.03em;
 }
 
 .hero-copy {
-  max-width: 38ch;
+  max-width: 44ch;
   margin: 0 auto;
   color: var(--text-muted);
-  font-size: clamp(1.02rem, 2.1vw, 1.14rem);
-  line-height: 1.75;
+  font-size: clamp(1rem, 2.1vw, 1.2rem);
+  line-height: 1.68;
 }
 
 .hero-panel {
@@ -208,7 +216,7 @@ a {
   box-shadow: 0 18px 30px -26px rgba(31, 99, 242, 0.55);
   text-align: left;
   max-width: 620px;
-  margin: 0.25rem auto 0;
+  margin: 0.65rem auto 0;
 }
 
 .hero-panel p {
@@ -234,7 +242,7 @@ a {
 }
 
 .hero-actions {
-  margin-top: 1.25rem;
+  margin-top: 1.45rem;
   display: flex;
   gap: 0.9rem;
   flex-wrap: wrap;
@@ -242,8 +250,8 @@ a {
 }
 
 .btn {
-  border-radius: 8px;
-  padding: 0.9rem 2.2rem;
+  border-radius: 999px;
+  padding: 0.78rem 1.35rem;
   font-weight: 500;
   border: 1px solid transparent;
   transition: all 0.2s ease;
@@ -274,14 +282,9 @@ a {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   max-width: 900px;
-  margin: 1.35rem auto 0;
+  margin: 1.1rem auto 0;
   list-style: none;
   padding: 0;
-}
-
-/* Keep the content below the fold while hero remains minimal and centered. */
-#capabilities {
-  padding-top: 0;
 }
 
 .metrics li {
@@ -331,7 +334,7 @@ a {
 #capabilities,
 #projects,
 .about {
-  padding: 2rem 0 0.6rem;
+  padding: 3rem 0 0.7rem;
 }
 
 .card-grid,
@@ -460,6 +463,60 @@ a {
   font-family: var(--font-code), monospace;
 }
 
+.projects-page {
+  padding-top: 1.2rem;
+  padding-bottom: 3rem;
+}
+
+.projects-hero {
+  text-align: center;
+  margin: 1.2rem auto 1.8rem;
+  max-width: 780px;
+}
+
+.projects-hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.projects-hero p {
+  margin: 0.85rem 0 0;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.project-page-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project-page-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.project-page-card h3 {
+  margin: 0.52rem 0 0.45rem;
+}
+
+.project-page-card p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.project-page-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .fade-up {
   opacity: 0;
   transform: translateY(12px);
@@ -497,11 +554,8 @@ a {
   .card-grid,
   .project-list,
   .metrics,
-  .process-strip {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-grid {
+  .process-strip,
+  .project-page-grid {
     grid-template-columns: 1fr;
   }
 
@@ -511,7 +565,7 @@ a {
 
   .hero {
     min-height: auto;
-    padding-top: 4.2rem;
+    padding-top: 3.5rem;
   }
 
   .topbar,
@@ -519,6 +573,11 @@ a {
   .section-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .project-page-head {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .nav-links {
@@ -573,7 +632,7 @@ a {
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
   }
   html {
     @apply font-sans;

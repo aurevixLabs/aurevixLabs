@@ -1,28 +1,22 @@
-import {AboutSection} from "./components/home/AboutSection";
-import {CapabilitiesSection} from "./components/home/CapabilitiesSection";
-import {
-  capabilities,
-  heroMetrics,
-  processSteps,
-  projects,
-  studioHighlights,
-} from "./components/home/data";
-import {HeroSection} from "./components/home/HeroSection";
-import {ProcessStrip} from "./components/home/ProcessStrip";
-import {ProjectsSection} from "./components/home/ProjectsSection";
-import {SiteFooter} from "./components/home/SiteFooter";
-import {SiteHeader} from "./components/home/SiteHeader";
+import {AboutSection} from "../components/AboutSection";
+
+import {capabilities, heroMetrics, projects} from "../lib/data";
+import {HeroSection} from "../components/landing/HeroSection";
+
+import {ProjectsSection} from "../components/ProjectsSection";
+import {SiteFooter} from "../components/landing/SiteFooter";
+import {SiteHeader} from "@/components/landing/SiteHeader";
+import {CapabilitiesSection} from "@/components/CapabilitiesSection";
+import Stats from "@/components/landing/Stats";
 
 export default function Home() {
   return (
-    <main className="site-shell">
-      <div className="ambient-bg" aria-hidden="true" />
-
+    <main className="min-h-screen bg-background text-foreground">
       <SiteHeader />
-      <HeroSection highlights={studioHighlights} metrics={heroMetrics} />
+      <HeroSection />
+      <Stats metrics={heroMetrics} />
       <CapabilitiesSection capabilities={capabilities} />
       <ProjectsSection projects={projects} />
-      <ProcessStrip steps={processSteps} />
       <AboutSection />
       <SiteFooter />
     </main>
