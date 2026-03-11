@@ -29,32 +29,7 @@ export const capabilities: Capability[] = [
   },
 ];
 
-export const projects: Project[] = [
-  {
-    name: "Snippify",
-    type: "DEVELOPER TOOLS",
-    status: "Coming Soon",
-    summary:
-      "Snippify is a simple tool that lets you create and download beautiful images of your code.",
-    href: "/projects",
-  },
-  {
-    name: "Feedora",
-    type: "DEVELOPER TOOLS",
-    status: "Coming Soon",
-    summary:
-      "Your users have ideas. Don’t miss them. Embed our simple feedback form and start capturing valuable insights instantly",
-    href: "/projects",
-  },
-  {
-    name: "PaletteCraft",
-    type: "DESIGN TOOLS",
-    status: "Coming Soon",
-    summary:
-      "PaletteCraft is an AI-powered color palette generator built for Adobe Express. It helps users quickly generate beautiful combinations.",
-    href: "/projects",
-  },
-];
+export const projects: Project[] = [];
 
 export const heroMetrics = [
   {value: "Open", label: "Source first"},

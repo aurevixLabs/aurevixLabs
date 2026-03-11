@@ -22,7 +22,7 @@ export function HeroSection() {
         <div className="mt-3 flex flex-wrap justify-center gap-3">
           <Button
             variant="outline"
-            render={<Link href="#projects" />}
+            render={<Link href="/projects" />}
             className="h-11 w-full rounded-xl px-10 text-sm font-medium sm:w-auto"
           >
             View Projects <MoveRight className="ml-2 size-4" />

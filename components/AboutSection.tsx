@@ -1,10 +1,9 @@
 import Link from "next/link";
-import {Button} from "./ui/button";
 
 export function AboutSection() {
   return (
     <section
-      className="mx-auto mt-10 w-[min(1100px,calc(100%-2.5rem))] scroll-mt-24 rounded-xl border border-border bg-card p-7 md:mt-12 md:p-10"
+      className="mx-auto mt-10 w-[min(1100px,calc(100%-2.5rem))] scroll-mt-24 rounded-xl border border-border bg-card p-5 md:mt-12 md:p-5"
       id="about"
     >
       <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
@@ -35,9 +34,11 @@ export function AboutSection() {
           experiment, learn, and build something meaningful.
         </p>
       </div>
-      <Button variant="link" className="mt-3 underline">
-        Contact us
-      </Button>
+      <span className="mt-2 block underline hover:text-foreground">
+        <Link href={"/contact"} className="text-sm font-medium">
+          Contact us
+        </Link>
+      </span>
     </section>
   );
 }

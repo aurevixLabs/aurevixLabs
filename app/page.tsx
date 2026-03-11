@@ -1,9 +1,9 @@
 import {AboutSection} from "../components/AboutSection";
 
-import {capabilities, heroMetrics, projects} from "../lib/data";
+import {capabilities, heroMetrics} from "../lib/data";
 import {HeroSection} from "../components/landing/HeroSection";
 
-import {ProjectsSection} from "../components/ProjectsSection";
+// import {ProjectsSection} from "../components/ProjectsSection";
 import {SiteFooter} from "../components/landing/SiteFooter";
 import {SiteHeader} from "@/components/landing/SiteHeader";
 import {CapabilitiesSection} from "@/components/CapabilitiesSection";
@@ -16,7 +16,7 @@ export default function Home() {
       <HeroSection />
       <Stats metrics={heroMetrics} />
       <CapabilitiesSection capabilities={capabilities} />
-      <ProjectsSection projects={projects} />
+      {/* <ProjectsSection projects={projects} /> */}
       <AboutSection />
       <SiteFooter />
     </main>
