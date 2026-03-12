@@ -7,8 +7,6 @@ export function SiteHeader() {
     {href: "/", label: "Home"},
     {href: "/projects", label: "Projects"},
     {href: "/about", label: "About"},
-    {href: "/terms", label: "Terms"},
-    {href: "/dmca", label: "DMCA"},
     {href: "/contact", label: "Contact"},
   ];
 
