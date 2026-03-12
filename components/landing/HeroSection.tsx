@@ -16,8 +16,8 @@ export function HeroSection() {
           Aurevix Labs
         </h1>
         <p className="mx-auto max-w-[46ch] text-base leading-7 text-muted-foreground md:text-lg md:leading-8">
-          We build software, developer tools, and experimental systems. Some
-          open source, some private
+          An internet lab building experiments, products, and developer tools.
+          Shipping ideas on the internet.
         </p>
         <div className="mt-3 flex flex-wrap justify-center gap-3">
           <Button
