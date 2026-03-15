@@ -11,6 +11,14 @@ export type Project = {
   href: string;
 };
 
+export type FeaturedProject = {
+  name: string;
+  type: string;
+  status: string;
+  summary: string;
+  href: string;
+};
+
 export const capabilities: Capability[] = [
   {
     title: "Open Source Developer",
@@ -30,6 +38,33 @@ export const capabilities: Capability[] = [
 ];
 
 export const projects: Project[] = [];
+
+export const featuredProjects: FeaturedProject[] = [
+  {
+    name: "Aurevix UI",
+    type: "Design System",
+    status: "In Progress",
+    summary:
+      "A clean component toolkit focused on developer-first interfaces and practical defaults.",
+    href: "/projects",
+  },
+  {
+    name: "Lab Experiments",
+    type: "R&D",
+    status: "Active",
+    summary:
+      "Fast prototyping tracks for product ideas, interaction patterns, and technical validation.",
+    href: "/projects",
+  },
+  {
+    name: "Infra Notes",
+    type: "Engineering",
+    status: "Upcoming",
+    summary:
+      "Internal tooling and systems work that supports reliable releases and scalable product delivery.",
+    href: "/projects",
+  },
+];
 
 export const heroMetrics = [
   {value: "Open", label: "Source first"},

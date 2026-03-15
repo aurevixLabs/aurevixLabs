@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {Menu} from "lucide-react";
 import {ThemeToggle} from "../ThemeToggle";
 
@@ -12,17 +13,32 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/90 backdrop-blur">
-        <div className="mx-auto flex w-[min(1100px,calc(100%-2.5rem))] items-center justify-between py-5">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-border/40 bg-background/85 backdrop-blur">
+        <div className="mx-auto flex w-[min(1100px,calc(100%-2.5rem))] items-center justify-between py-3">
           <Link
             href="/"
-            className="font-mono text-sm tracking-[0.08em] uppercase"
+            className="minimal-fade-up flex items-center transition-transform duration-200 hover:scale-[1.01]"
           >
-            Aurevix Labs
+            <Image
+              src="/aurevixlabs-logo-light.svg"
+              alt="Aurevix Labs"
+              width={190}
+              height={50}
+              className="dark:hidden"
+              priority
+            />
+            <Image
+              src="/aurevixlabs-logo.svg"
+              alt="Aurevix Labs"
+              width={190}
+              height={50}
+              className="hidden dark:block"
+              priority
+            />
           </Link>
           <div className="flex items-center gap-2">
             <nav
-              className="hidden items-center gap-5 text-sm text-muted-foreground md:flex"
+              className="hidden items-center gap-6 text-xs tracking-[0.08em] text-muted-foreground uppercase md:flex"
               aria-label="Main"
             >
               {navLinks.map((link) => (
@@ -59,7 +75,7 @@ export function SiteHeader() {
           </div>
         </div>
       </header>
-      <div aria-hidden="true" className="h-20.25" />
+      <div aria-hidden="true" className="h-18" />
     </>
   );
 }

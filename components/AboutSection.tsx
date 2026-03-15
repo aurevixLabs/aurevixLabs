@@ -3,10 +3,10 @@ import Link from "next/link";
 export function AboutSection() {
   return (
     <section
-      className="mx-auto mt-10 w-[min(1100px,calc(100%-2.5rem))] scroll-mt-24 rounded-xl border border-border bg-card p-5 md:mt-12 md:p-5"
+      className="minimal-fade-up mx-auto mt-10 w-[min(1100px,calc(100%-2.5rem))] scroll-mt-24 border-t border-border/70 py-12 md:mt-12"
       id="about"
     >
-      <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
+      <h2 className="text-center text-3xl font-semibold tracking-tight md:text-4xl">
         About
       </h2>
       <div className="mt-5 space-y-5 leading-7 text-muted-foreground md:mt-8">
@@ -34,7 +34,7 @@ export function AboutSection() {
           experiment, learn, and build something meaningful.
         </p>
       </div>
-      <span className="mt-2 block underline hover:text-foreground">
+      <span className="mt-4 block transition-colors hover:text-foreground">
         <Link href={"/contact"} className="text-sm font-medium">
           Contact us
         </Link>

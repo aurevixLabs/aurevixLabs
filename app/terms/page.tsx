@@ -104,8 +104,8 @@ export default function TermsPage() {
           <section>
             <h2 className="text-lg font-medium">6. Limitation of Liability</h2>
             <p className="mt-2 leading-7 text-muted-foreground">
-              Aurevix Labs provides its services "as is" without warranties of
-              any kind.
+              Aurevix Labs provides its services &quot;as is&quot; without
+              warranties of any kind.
             </p>
             <p className="mt-2 leading-7 text-muted-foreground">
               We are not responsible for any direct, indirect, or incidental

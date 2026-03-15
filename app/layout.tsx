@@ -21,6 +21,11 @@ export const metadata: Metadata = {
   title: "Aurevix Labs",
   description:
     "Aurevix Labs builds software products, developer systems, and experimental infrastructure.",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
